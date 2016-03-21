@@ -1,0 +1,19 @@
+<div id="internetConnectionStatus">
+    <div class="row">
+        <div class="col-xs-6">
+            <!--
+            <span>Connection detection technique</span>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-class="{'active' : internetConnectionStatus.technique=='html5'}" ng-click="internetConnectionStatus.changeTechnique('html5')">HTML5</button>
+                <button type="button" class="btn btn-default" ng-class="{'active' : internetConnectionStatus.technique=='ajax'}" ng-click="internetConnectionStatus.changeTechnique('ajax')">AJAX</button>-
+            </div>
+            -->
+            <button type="button" class="btn btn-default" ng-click="internetConnectionStatus.checkConnectivity()">Check Connectivity</button>
+        </div>
+        <div class="col-xs-6">
+            <span>Connection status: </span>
+            <span ng-class="internetConnectionStatus.isUp? 'glyphicon glyphicon-ok up' : 'glyphicon glyphicon-remove down'"></span>
+            <span ng-class="internetConnectionStatus.isUp? 'up' : 'down'">{{internetConnectionStatus.isUp ? 'Connected' : 'Disconnected'}}</span>
+        </div>
+    </div>
+</div>

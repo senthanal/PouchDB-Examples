@@ -1,0 +1,54 @@
+<div id="offline">
+    <div class="row">
+        <div class="col-sm-12">
+            <p>No.of features in the PouchDB: <strong class="text-success">{{offline.featuresCount}}</strong></p>
+        </div>
+        <div class="col-xs-6">
+            <a class="btn btn-default" ng-click="offline.read()">
+                <span class="glyphicon glyphicon-transfer"></span>
+                <span>Read from PouchDB</span>
+            </a>
+        </div>
+        <div class="col-xs-6">
+            <a class="btn btn-default" ng-click="offline.remove()">
+                <span class="glyphicon glyphicon-trash"></span>
+                <span>Delete Features Doc</span>
+            </a>
+        </div>
+    </div>
+    <div class="row" ng-if="offline.feature">
+        <div class="col-sm-12">
+            <div class="col-sm-offset-4">
+                <button class="btn btn-default" ng-click="offline.firstFeature()">
+                    <span class="glyphicon glyphicon-step-backward"></span>
+                </button>
+                <button class="btn btn-default" ng-click="offline.previousFeature()" ng-disabled="offline.disabled == 'Prev'">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </button>
+                <button class="btn btn-default" ng-click="offline.nextFeature()" ng-disabled="offline.disabled == 'Next'">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
+                <button class="btn btn-default" ng-click="offline.lastFeature()">
+                    <span class="glyphicon glyphicon-step-forward"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" ng-model="offline.feature.name" class="form-control" id="name" placeholder="name" ng-change="offline.changed()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div ng-if="offline.formData">
+        <a class="btn btn-default" ng-click="offline.clear()">
+            <span class="glyphicon glyphicon-remove"></span>
+            <span>Clear JSON</span>
+        </a>
+        <div class="code" pretty-json="offline.formData"></div>
+    </div>
+</div>

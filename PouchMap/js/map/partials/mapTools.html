@@ -1,0 +1,32 @@
+<div id="mapTools">
+    <a class="btn btn-default" ng-click="mapTools.geolocate()">
+        <span class="glyphicon glyphicon-globe"></span>
+    </a>
+    <!--
+    <a class="btn btn-default" ng-click="mapTools.clear()">
+        <span class="glyphicon glyphicon-trash"></span>
+    </a>
+    -->
+    <div id="selections" class="pull-right dropdown">
+        <a
+                class="btn btn-default modeOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                ng-click="mapTools.features.visible=!mapTools.features.visible"
+        >
+            <span>{{mapTools.features.mode.title}}</span>
+            <span class="caret"></span>
+        </a>
+
+        <ul class="dropdown-menu" role="menu">
+            <li
+                    ng-repeat="mode in mapTools.features.modeOptions"
+                    ng-click="mapTools.features.toggleMode(mode)"
+            >
+                <a href="javascript:void(0)">
+                <span class="icon medium {{mode.icon}}" ng-class="{active: mode.isActive}">
+                </span>
+                    <span class="glyphicon-class" translate>{{mode.title}}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

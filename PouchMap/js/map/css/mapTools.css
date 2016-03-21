@@ -1,0 +1,11 @@
+#mapTools{
+    margin-top: -6px;
+}
+#mapTools > a.btn{
+    border-radius: 0px;
+}
+
+#mapTools > #selections > .modeOption{
+    background-color: transparent;
+    border:  0px;
+}

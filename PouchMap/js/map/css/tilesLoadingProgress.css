@@ -1,0 +1,9 @@
+#tilesLoadingProgress {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: rgba(0, 54, 113, 0.4);
+    width: 0;
+    transition: width 250ms;
+}

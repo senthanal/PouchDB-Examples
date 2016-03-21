@@ -1,0 +1,28 @@
+#offline > .code{
+    white-space: normal;
+}
+
+#prettyjson{
+    border-radius: 0px;
+    height: 135px;
+    overflow: auto;
+}
+
+#offline > .row{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCC;
+}
+
+#offline > div.row.ng-scope > div.col-xs-12 > form > div{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.up{
+    color: green;
+}
+
+.down{
+    color: red;
+}

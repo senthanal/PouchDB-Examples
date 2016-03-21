@@ -1,0 +1,11 @@
+html, body{
+    font-size: 1em;
+}
+
+.container{
+    margin-top: 5px;
+}
+
+.panel{
+    margin-bottom: 10px;
+}
